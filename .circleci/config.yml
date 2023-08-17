@@ -1,0 +1,38 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: circleci/node:14
+
+    steps:
+      - checkout
+
+      - run:
+          name: Install Backend Dependencies
+          command: npm install
+          working_directory: /path/to/backend
+
+      - run:
+          name: Run Backend Tests
+          command: npm test
+          working_directory: E:\Previous Data\Inventory Management System\server
+
+      - run:
+          name: Build Frontend
+          command: npm install
+          working_directory: E:\Previous Data\Inventory Management System\client
+
+      - run:
+          name: Run Frontend Tests
+          command: npm test
+          working_directory: E:\Previous Data\Inventory Management System\client
+
+      - store_test_results:
+          path: /path/to/test-results
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
