@@ -11,22 +11,22 @@ jobs:
       - run:
           name: Install Backend Dependencies
           command: npm install
-          working_directory: Inventory Management System\server
+          working_directory: E:\Previous Data\Inventory Management System\server
 
       - run:
           name: Run Backend Tests
           command: npm test
-          working_directory: Inventory Management System\server
+          working_directory: E:\Previous Data\Inventory Management System\server
 
       - run:
           name: Build Frontend
           command: npm install
-          working_directory: Inventory Management System\client
+          working_directory: E:\Previous Data\Inventory Management System\client
 
       - run:
           name: Run Frontend Tests
           command: npm test
-          working_directory: Inventory Management System\client
+          working_directory: E:\Previous Data\Inventory Management System\client
 
 workflows:
   version: 2
