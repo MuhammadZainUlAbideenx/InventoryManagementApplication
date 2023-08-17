@@ -11,7 +11,7 @@ jobs:
       - run:
           name: Install Backend Dependencies
           command: npm install
-          working_directory: /path/to/backend
+          working_directory: E:\Previous Data\Inventory Management System\server
 
       - run:
           name: Run Backend Tests
