@@ -28,9 +28,6 @@ jobs:
           command: npm test
           working_directory: E:\Previous Data\Inventory Management System\client
 
-      - store_test_results:
-          path: /path/to/test-results
-
 workflows:
   version: 2
   build-and-deploy:
