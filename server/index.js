@@ -1,0 +1,13 @@
+import express from "express";
+import Connection from "./db.js";
+import bodyParser from "body-parser";
+import Routes from "./Route.js";
+import cors from "cors";
+const app = express();
+app.use(bodyParser.json({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors());
+app.use("/", Routes);
+const PORT = 8000;
+Connection();
+app.listen(PORT, () => console.log("Server Success"));
